@@ -26,6 +26,27 @@ elif user_role == "viewer":
 else:
     print(f"Access denied, you do not have the permissions to access the records, Please login with a valid account.")
 
+# Create a variable named cart_total and set it to 750.
+# Write an if / elif / else structure to determine the shipping_cost:
+# If cart_total is 1000 or more, the shipping is free (0).
+# Else if (elif) cart_total is 500 or more (but less than 1000), the shipping is 150.
+# Else (for anything under 500), the shipping is 300.
+# Store the result in a new variable called shipping_cost.
+# Print an f-string that says: "Your cart total is {cart_total} PKR. Your shipping cost is {shipping_cost} PKR."
+
+cart_total = 750
+shipping_cost = 0
+
+if cart_total >= 1000:
+    shipping_cost = 0
+elif cart_total >= 500:
+    shipping_cost = 150
+else:
+    shipping_cost = 300
+
+print(f"Your cart total is {cart_total} PKR. Your shipping cost is {shipping_cost} PKR.")
+
+
 
 
 
