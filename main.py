@@ -76,6 +76,28 @@ print(f"Product Name: {product['name']}.")
 print(f"Product Price: {product['price']} PKR.")
 print(f"Product availability: {'In Stock' if product['inStock'] else 'Out of Stock'}.")
 
+# Create a dictionary named user_profile.
+# Give it exactly these four keys and values:
+# "username" with the value "ali_dev"
+# "role" with the value "editor"
+# "login_count" with the value 5
+# "is_active" with the value True
+# Write an f-string that prints: "User ali_dev is an editor and has logged in 5 times." (Hint: Use the dictionary keys to pull the data dynamically, don't just type the words!)
+# Finally, simulate the user logging in again by updating the "login_count" to 6, and print the new count.
+
+user_profile = {
+    "user_name" : "ali_dev",
+    "role": "editor",
+    "login_count": 5,
+    "is_active": True
+}
+
+print(f"User {user_profile['user_name']} is an {user_profile['role']} and has logged in {user_profile['login_count']} times.")
+
+user_profile["login_count"] += 1
+print(f"User {user_profile['user_name']} is a {user_profile['role']} and has logged in {user_profile['login_count']} times.")
+
+
 
 
 
