@@ -97,13 +97,13 @@
 # user_profile["login_count"] += 1
 # print(f"User {user_profile['user_name']} is a {user_profile['role']} and has logged in {user_profile['login_count']} times.")
 
-employees = [
-    {"name": "Usman", "age": 22, "designation": "AI-Ingineer"},
-    {"name": "Sarah", "age": 20, "designation": "Software Engineer"}
-]
+# employees = [
+#     {"name": "Usman", "age": 22, "designation": "AI-Ingineer"},
+#     {"name": "Sarah", "age": 20, "designation": "Software Engineer"}
+# ]
 
-for emp in employees:
-    print(f"Employee Name: {emp['name']}, is {emp['age']} years old and works as a {emp['designation']} at Folio 3.")
+# for emp in employees:
+#     print(f"Employee Name: {emp['name']}, is {emp['age']} years old and works as a {emp['designation']} at Folio 3.")
 
 # Create a list named cart_items containing exactly 3 dictionaries.
 # Each dictionary must have two keys: "item_name" (a string) and "price" (a number).
@@ -114,16 +114,50 @@ for emp in employees:
 # Else, print an f-string: "{item_name} is a STANDARD item."
 # (Hint: Remember to use the item dictionary to pull out the item_name and price dynamically!)
 
-cart_items = [
-    {"item_name": "Chicken Tikka", "price": 1200},
-    {"item_name": "Beef Burger", "price": 800},
-    {"item_name": "Coffee Mug", "price": 500}
-]
-for item in cart_items:
-    if item['price'] >= 1000:
-        print(f"{item['item_name']} is a premium item.")
+# cart_items = [
+#     {"item_name": "Chicken Tikka", "price": 1200},
+#     {"item_name": "Beef Burger", "price": 800},
+#     {"item_name": "Coffee Mug", "price": 500}
+# ]
+# for item in cart_items:
+#     if item['price'] >= 1000:
+#         print(f"{item['item_name']} is a premium item.")
+#     else:
+#         print(f"{item['item_name']} is a standard item.")
+
+def calculate_discounted_price(original_price, discount_percentage):
+    discounted_amount = original_price * (discount_percentage / 100)
+    actual_amount = original_price - discounted_amount
+    return actual_amount
+
+final_price_1 = calculate_discounted_price(2000, 20)
+
+print(f"The amount that you are supposed to pay after {20}% discount is : {final_price_1} PKR.")
+
+# Define a function named check_voting_eligibility.
+# It should take one parameter: age.
+# Inside the function, write an if/else statement:
+# If age is 18 or older, return the string "Eligible to vote".
+# Else, return the string "Not eligible to vote".
+# Below the function, create a list of ages: [16, 18, 21, 15, 30].
+# Write a for loop to go through the list of ages.
+# Inside the loop, call your function, passing in the current age. Store the returned result in a variable called status.
+# Print an f-string: "Age {age}: {status}"
+
+def check_voting_eligibility(age):
+    if age >= 18:
+        return "You are eligible to vote."
     else:
-        print(f"{item['item_name']} is a standard item.")
+        return "You are not eligible to vote."
+
+ages = [16, 18, 21, 15, 30]
+
+for age in ages:
+    status = check_voting_eligibility(age)
+    print(f"You are {age} years old, so you are {status}")
+
+    
+
 
 
 
