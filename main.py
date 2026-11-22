@@ -46,6 +46,25 @@ else:
 
 print(f"Your cart total is {cart_total} PKR. Your shipping cost is {shipping_cost} PKR.")
 
+user_names = ["Ali", "Usman", "Sara"]
+
+for name in user_names:
+    if name == "Ali":
+        print(f"Hello {name}, welcome back!")
+    elif name == "Usman":
+        print(f"Hello {name}, how have you been?")
+    elif name == "Sara":
+        print(f"Hello {name}, it's great to see you!")
+    else:
+        print(f"Hello {name}, welcome!")
+
+user_age = [15, 22, 17, 30, 12, 19]
+for age in user_age:
+    if age >= 18:
+        print(f"User aged {age} is an Adult.")
+    else:
+        print(f"User aged {age} is a Minor.")
+
 
 
 
