@@ -66,6 +66,17 @@ for age in user_age:
         print(f"User aged {age} is a Minor.")
 
 
+product = {
+    "name" : "Mechanical Keyboard",
+    "price": 3500,
+    "inStock": True 
+}
+
+print(f"Product Name: {product['name']}.")
+print(f"Product Price: {product['price']} PKR.")
+print(f"Product availability: {'In Stock' if product['inStock'] else 'Out of Stock'}.")
+
+
 
 
 
