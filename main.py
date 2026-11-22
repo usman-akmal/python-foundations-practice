@@ -15,6 +15,18 @@ if user_age >= minimum_age:
 else:
     print(f"Access denied. You must be at least {minimum_age} years old to book a riding service.")
 
+user_role = "guest"
+
+if user_role == "admin":
+    print(f"Access granted, you can view, edit or delete all the records.")
+elif user_role == "editor":
+    print(f"Access granted, you can view and edit the records.")
+elif user_role == "viewer":
+    print(f"Access granted, you can only view the records.")
+else:
+    print(f"Access denied, you do not have the permissions to access the records, Please login with a valid account.")
+
+
 
 
 
