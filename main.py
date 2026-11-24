@@ -125,14 +125,14 @@
 #     else:
 #         print(f"{item['item_name']} is a standard item.")
 
-def calculate_discounted_price(original_price, discount_percentage):
-    discounted_amount = original_price * (discount_percentage / 100)
-    actual_amount = original_price - discounted_amount
-    return actual_amount
+# def calculate_discounted_price(original_price, discount_percentage):
+#     discounted_amount = original_price * (discount_percentage / 100)
+#     actual_amount = original_price - discounted_amount
+#     return actual_amount
 
-final_price_1 = calculate_discounted_price(2000, 20)
+# final_price_1 = calculate_discounted_price(2000, 20)
 
-print(f"The amount that you are supposed to pay after {20}% discount is : {final_price_1} PKR.")
+# print(f"The amount that you are supposed to pay after {20}% discount is : {final_price_1} PKR.")
 
 # Define a function named check_voting_eligibility.
 # It should take one parameter: age.
@@ -144,17 +144,17 @@ print(f"The amount that you are supposed to pay after {20}% discount is : {final
 # Inside the loop, call your function, passing in the current age. Store the returned result in a variable called status.
 # Print an f-string: "Age {age}: {status}"
 
-def check_voting_eligibility(age):
-    if age >= 18:
-        return "You are eligible to vote."
-    else:
-        return "You are not eligible to vote."
+# def check_voting_eligibility(age):
+#     if age >= 18:
+#         return "You are eligible to vote."
+#     else:
+#         return "You are not eligible to vote."
 
-ages = [16, 18, 21, 15, 30]
+# ages = [16, 18, 21, 15, 30]
 
-for age in ages:
-    status = check_voting_eligibility(age)
-    print(f"You are {age} years old, so you are {status}")
+# for age in ages:
+#     status = check_voting_eligibility(age)
+#     print(f"You are {age} years old, so you are {status}")
 
 # Define a function named check_driving_eligibility.
 # The function should take one parameter: age.
@@ -170,17 +170,54 @@ for age in ages:
 # python
 # Age {age}: {status}
 
-def check_driving_eligibility(age):
-    if age >= 18:
-        return "Eligible to drive"
-    else:
-        return "Not eligible to drive"
+# def check_driving_eligibility(age):
+#     if age >= 18:
+#         return "Eligible to drive"
+#     else:
+#         return "Not eligible to drive"
 
-ages = [14, 19, 17, 25, 16]
+# ages = [14, 19, 17, 25, 16]
+
+# for age in ages:
+#     status = check_driving_eligibility(age)
+#     print(f"Age {age}: {status}")
+
+# Define a function named calculate_ticket_price.
+# The function should take one parameter: age.
+# Inside the function, use if/elif/else statements:
+# If the age is below 5, return "Free Entry".
+# If the age is between 5 and 17 (inclusive), return "Ticket Price: Rs. 300".
+# If the age is between 18 and 59 (inclusive), return "Ticket Price: Rs. 600".
+# Otherwise (age 60 or above), return "Ticket Price: Rs. 250".
+# Below the function, create a list of ages:
+# python
+# ages = [3, 10, 18, 25, 62, 45, 7, 70]
+# Write a for loop to iterate through the list.
+# Inside the loop:
+# Call your function using the current age.
+# Store the returned result in a variable named status.
+# Print the result using an f-string in this format:
+# python
+# Age {age}: {status}
+
+def calculate_ticket_price(age):
+    if age < 5:
+        return "Free Entry"
+    elif 5 <= age <= 17:
+        return "Ticket Price: Rs. 300"
+    elif 18 <= age <= 59:
+        return "Ticket Price: Rs. 600"
+    else:
+        return "Ticket Price: Rs. 250"
+
+ages = [3, 10, 18, 25, 62, 45, 7, 70]
 
 for age in ages:
-    status = check_driving_eligibility(age)
-    print(f"Age {age}: {status}")
+    status = calculate_ticket_price(age)
+    print(f"Age: {age}: {status}")
+
+
+
 
     
 
