@@ -156,6 +156,32 @@ for age in ages:
     status = check_voting_eligibility(age)
     print(f"You are {age} years old, so you are {status}")
 
+# Define a function named check_driving_eligibility.
+# The function should take one parameter: age.
+# Inside the function, write an if/else statement:
+# If age is 18 or older, return "Eligible to drive".
+# Otherwise, return "Not eligible to drive".
+# Below the function, create a list of ages: [14, 19, 17, 25, 16].
+# Write a for loop to go through the list.
+# Inside the loop:
+# Call your function, passing the current age.
+# Store the returned result in a variable called status.
+# Print an f-string in this format:
+# python
+# Age {age}: {status}
+
+def check_driving_eligibility(age):
+    if age >= 18:
+        return "Eligible to drive"
+    else:
+        return "Not eligible to drive"
+
+ages = [14, 19, 17, 25, 16]
+
+for age in ages:
+    status = check_driving_eligibility(age)
+    print(f"Age {age}: {status}")
+
     
 
 
