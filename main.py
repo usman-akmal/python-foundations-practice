@@ -200,21 +200,69 @@
 # python
 # Age {age}: {status}
 
-def calculate_ticket_price(age):
-    if age < 5:
-        return "Free Entry"
-    elif 5 <= age <= 17:
-        return "Ticket Price: Rs. 300"
-    elif 18 <= age <= 59:
-        return "Ticket Price: Rs. 600"
-    else:
-        return "Ticket Price: Rs. 250"
+# def calculate_ticket_price(age):
+#     if age < 5:
+#         return "Free Entry"
+#     elif 5 <= age <= 17:
+#         return "Ticket Price: Rs. 300"
+#     elif 18 <= age <= 59:
+#         return "Ticket Price: Rs. 600"
+#     else:
+#         return "Ticket Price: Rs. 250"
 
-ages = [3, 10, 18, 25, 62, 45, 7, 70]
+# ages = [3, 10, 18, 25, 62, 45, 7, 70]
 
-for age in ages:
-    status = calculate_ticket_price(age)
-    print(f"Age: {age}: {status}")
+# for age in ages:
+#     status = calculate_ticket_price(age)
+#     print(f"Age: {age}: {status}")
+
+userdata = {"name" : "Sarah", "age" : "21"}
+
+try:
+    user_role = userdata["role"]
+    print(f"User role : {user_role}")
+except KeyError:
+    print(f"User role is not defined in the dictionary or the database so we cannot retrieve the user_role")
+
+print("The application is still running despite the error.")
+
+# Define a function named get_user_age that takes one parameter: user_data (a dictionary).
+# Inside the function, write a try block:
+# Try to access user_data["age"].
+# If it works, return the age.
+# Write an except KeyError block:
+# If the key is missing, return the string "Age not provided".
+# Below the function, create a list of two dictionaries:
+# The first dictionary should have "name": "Sara" and "age": 25.
+# The second dictionary should ONLY have "name": "Ahmed" (no age!).
+# Write a for loop to iterate through the list.
+# Inside the loop, call your get_user_age function, passing in the current dictionary. Store the result in a variable called age_status.
+# Print an f-string: "User: {name}, Age Status: {age_status}" (Hint: You will need to pull the name out of the dictionary too!)
+
+def get_user_age(user_data):
+    try:
+        user_age = user_data["age"]
+        if(user_age):
+            return f"Age: {user_age}"
+    except KeyError:
+         return "The age is not provided."
+
+user_data = [
+    {"name" : "Sarah", "age": "21"},
+    {"name" : "Ahmed"}
+    
+]
+
+for employee in user_data:
+    age_status = get_user_age(employee)
+    print(f"User: {employee["name"]}, Age Status: {age_status}")
+
+
+
+    
+
+
+
 
 
 
