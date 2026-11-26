@@ -216,15 +216,15 @@
 #     status = calculate_ticket_price(age)
 #     print(f"Age: {age}: {status}")
 
-userdata = {"name" : "Sarah", "age" : "21"}
+# userdata = {"name" : "Sarah", "age" : "21"}
 
-try:
-    user_role = userdata["role"]
-    print(f"User role : {user_role}")
-except KeyError:
-    print(f"User role is not defined in the dictionary or the database so we cannot retrieve the user_role")
+# try:
+#     user_role = userdata["role"]
+#     print(f"User role : {user_role}")
+# except KeyError:
+#     print(f"User role is not defined in the dictionary or the database so we cannot retrieve the user_role")
 
-print("The application is still running despite the error.")
+# print("The application is still running despite the error.")
 
 # Define a function named get_user_age that takes one parameter: user_data (a dictionary).
 # Inside the function, write a try block:
@@ -239,23 +239,42 @@ print("The application is still running despite the error.")
 # Inside the loop, call your get_user_age function, passing in the current dictionary. Store the result in a variable called age_status.
 # Print an f-string: "User: {name}, Age Status: {age_status}" (Hint: You will need to pull the name out of the dictionary too!)
 
-def get_user_age(user_data):
-    try:
-        user_age = user_data["age"]
-        if(user_age):
-            return f"Age: {user_age}"
-    except KeyError:
-         return "The age is not provided."
+# def get_user_age(user_data):
+#     try:
+#         user_age = user_data["age"]
+#         if(user_age):
+#             return f"Age: {user_age}"
+#     except KeyError:
+#          return "The age is not provided."
 
-user_data = [
-    {"name" : "Sarah", "age": "21"},
-    {"name" : "Ahmed"}
+# user_data = [
+#     {"name" : "Sarah", "age": "21"},
+#     {"name" : "Ahmed"}
     
-]
+# ]
 
-for employee in user_data:
-    age_status = get_user_age(employee)
-    print(f"User: {employee["name"]}, Age Status: {age_status}")
+# for employee in user_data:
+#     age_status = get_user_age(employee)
+#     print(f"User: {employee["name"]}, Age Status: {age_status}")
+
+import json
+
+python_user = {
+    "name" : "Usman",
+    "role": "admin",
+    "is_active": True
+}
+
+# I am converting this python dictionary into a json text
+json_string = json.dumps(python_user)
+print(json_string)
+
+# now i am converting this json text back to the python dictionary
+received_json = '{"name" : "Sarah", "age" : "25"}'
+python_dict = json.loads(received_json)
+print(python_dict["name"],python_dict["age"])
+
+
 
 
 
