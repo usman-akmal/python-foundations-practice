@@ -257,22 +257,45 @@
 #     age_status = get_user_age(employee)
 #     print(f"User: {employee["name"]}, Age Status: {age_status}")
 
+# import json
+
+# python_user = {
+#     "name" : "Usman",
+#     "role": "admin",
+#     "is_active": True
+# }
+
+# # I am converting this python dictionary into a json text
+# json_string = json.dumps(python_user)
+# print(json_string)
+
+# # now i am converting this json text back to the python dictionary
+# received_json = '{"name" : "Sarah", "age" : "25"}'
+# python_dict = json.loads(received_json)
+# print(python_dict["name"],python_dict["age"])
+
+# Write a Python script that does the following:
+# import json at the very top of your file.
+# Create a variable named api_response that contains this exact JSON string:
+# '{"status": "success", "data": {"user_id": 101, "credits": 50}}'
+# (Notice it's a single string wrapped in single quotes, containing double quotes inside).
+# Use json.loads() to convert api_response into a Python dictionary. Store it in a variable called parsed_data.
+# Write an f-string that prints: "Status: {status}, User ID: {user_id}, Credits: {credits}" by extracting the values from parsed_data.
+# (Hint: You will need to use nested dictionary keys like parsed_data['data']['user_id']).
+# Finally, create a new Python dictionary named new_user with keys "name" and "is_verified" (set to True).
+# Use json.dumps() to convert new_user into a JSON string and print it.
+
 import json
 
-python_user = {
-    "name" : "Usman",
-    "role": "admin",
-    "is_active": True
-}
+api_response = '{"status": "success", "data": {"user_id": 101, "credits": 50}}'
 
-# I am converting this python dictionary into a json text
-json_string = json.dumps(python_user)
-print(json_string)
+parsed_data = json.loads(api_response)
+print(f"Status: {parsed_data['status']}, User ID: {parsed_data['data']['user_id']}, Credits: {parsed_data['data']['credits']}")
 
-# now i am converting this json text back to the python dictionary
-received_json = '{"name" : "Sarah", "age" : "25"}'
-python_dict = json.loads(received_json)
-print(python_dict["name"],python_dict["age"])
+new_user = {"name" : "Sarah","is_active": "True"}
+json.dumps(new_user)
+print(new_user)
+
 
 
 
