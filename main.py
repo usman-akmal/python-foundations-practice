@@ -292,9 +292,9 @@ api_response = '{"status": "success", "data": {"user_id": 101, "credits": 50}}'
 parsed_data = json.loads(api_response)
 print(f"Status: {parsed_data['status']}, User ID: {parsed_data['data']['user_id']}, Credits: {parsed_data['data']['credits']}")
 
-new_user = {"name" : "Sarah","is_active": "True"}
-json.dumps(new_user)
-print(new_user)
+new_user = {"name" : "Sarah","is_active": True}
+json_string = json.dumps(new_user)
+print(json_string)
 
 
 
