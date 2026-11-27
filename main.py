@@ -316,24 +316,44 @@
 # json_string = json.dumps(new_product)
 # print(json_string)
 
+# import json
+
+# api_response = '{"status": "active", "account": {"account_id": 307, "balance": 2500}}'
+
+# parsed_data = json.loads(api_response)
+
+# print(
+#     f"Status: {parsed_data['status']}, "
+#     f"Account ID: {parsed_data['account']['account_id']}, "
+#     f"Balance: {parsed_data['account']['balance']} PKR"
+# )
+
+# new_employee = {
+#     "name": "Ahmed",
+#     "is_verified": False
+# }
+
+# json_string = json.dumps(new_employee)
+# print(json_string)
+
 import json
 
-api_response = '{"status": "active", "account": {"account_id": 307, "balance": 2500}}'
+api_response = '{"status": "delivered", "shipment": {"tracking_id": 8842, "distance": 320}}'
 
 parsed_data = json.loads(api_response)
 
 print(
     f"Status: {parsed_data['status']}, "
-    f"Account ID: {parsed_data['account']['account_id']}, "
-    f"Balance: {parsed_data['account']['balance']} PKR"
+    f"Tracking ID: {parsed_data['shipment']['tracking_id']}, "
+    f"Distance: {parsed_data['shipment']['distance']} km"
 )
 
-new_employee = {
-    "name": "Ahmed",
-    "is_verified": False
+new_driver = {
+    "name": "Bilal",
+    "is_available": True
 }
 
-json_string = json.dumps(new_employee)
+json_string = json.dumps(new_driver)
 print(json_string)
 
 
