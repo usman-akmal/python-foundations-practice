@@ -296,24 +296,44 @@
 # json_string = json.dumps(new_user)
 # print(json_string)
 
+# import json
+
+# api_response = '{"status": "completed", "order": {"order_id": 205, "total_amount": 1450}}'
+
+# parsed_data = json.loads(api_response)
+
+# print(
+#     f"Status: {parsed_data['status']}, "
+#     f"Order ID: {parsed_data['order']['order_id']}, "
+#     f"Total: {parsed_data['order']['total_amount']} PKR"
+# )
+
+# new_product = {
+#     "name": "Gaming Mouse",
+#     "is_available": True
+# }
+
+# json_string = json.dumps(new_product)
+# print(json_string)
+
 import json
 
-api_response = '{"status": "completed", "order": {"order_id": 205, "total_amount": 1450}}'
+api_response = '{"status": "active", "account": {"account_id": 307, "balance": 2500}}'
 
 parsed_data = json.loads(api_response)
 
 print(
     f"Status: {parsed_data['status']}, "
-    f"Order ID: {parsed_data['order']['order_id']}, "
-    f"Total: {parsed_data['order']['total_amount']} PKR"
+    f"Account ID: {parsed_data['account']['account_id']}, "
+    f"Balance: {parsed_data['account']['balance']} PKR"
 )
 
-new_product = {
-    "name": "Gaming Mouse",
-    "is_available": True
+new_employee = {
+    "name": "Ahmed",
+    "is_verified": False
 }
 
-json_string = json.dumps(new_product)
+json_string = json.dumps(new_employee)
 print(json_string)
 
 
