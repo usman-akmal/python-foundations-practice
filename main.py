@@ -285,15 +285,35 @@
 # Finally, create a new Python dictionary named new_user with keys "name" and "is_verified" (set to True).
 # Use json.dumps() to convert new_user into a JSON string and print it.
 
+# import json
+
+# api_response = '{"status": "success", "data": {"user_id": 101, "credits": 50}}'
+
+# parsed_data = json.loads(api_response)
+# print(f"Status: {parsed_data['status']}, User ID: {parsed_data['data']['user_id']}, Credits: {parsed_data['data']['credits']}")
+
+# new_user = {"name" : "Sarah","is_active": True}
+# json_string = json.dumps(new_user)
+# print(json_string)
+
 import json
 
-api_response = '{"status": "success", "data": {"user_id": 101, "credits": 50}}'
+api_response = '{"status": "completed", "order": {"order_id": 205, "total_amount": 1450}}'
 
 parsed_data = json.loads(api_response)
-print(f"Status: {parsed_data['status']}, User ID: {parsed_data['data']['user_id']}, Credits: {parsed_data['data']['credits']}")
 
-new_user = {"name" : "Sarah","is_active": True}
-json_string = json.dumps(new_user)
+print(
+    f"Status: {parsed_data['status']}, "
+    f"Order ID: {parsed_data['order']['order_id']}, "
+    f"Total: {parsed_data['order']['total_amount']} PKR"
+)
+
+new_product = {
+    "name": "Gaming Mouse",
+    "is_available": True
+}
+
+json_string = json.dumps(new_product)
 print(json_string)
 
 
